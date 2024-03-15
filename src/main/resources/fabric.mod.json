@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "motcraft",
+	"version": "${version}",
+	"name": "MotCraft",
+	"description": "A content mod. Subscribe to Grace Motley!",
+	"authors": [
+		"Motley"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/motcraft/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "net.motley.motcraft.motcraft"
+		],
+		"fabric-datagen": [
+			"net.motley.motcraft.motcraftDataGenerator"
+		],
+		"client": [
+			"net.motley.motcraft.motcraftModClient"
+		]
+	},
+	"mixins": [
+		"motcraft.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.7",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
